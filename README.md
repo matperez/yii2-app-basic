@@ -1,5 +1,7 @@
-Yii 2 Basic Application Template
+Yii 2 Basic Application Template with environments
 ================================
+
+See [advanced template] (https://github.com/yiisoft/yii2-app-advanced) for environments details. Anything else will remain the same.
 
 Yii 2 Basic Application Template is a skeleton Yii 2 application best for
 rapidly creating small projects.
