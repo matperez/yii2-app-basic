@@ -1,0 +1,42 @@
+syntax: glob
+
+# phpstorm project files
+.idea
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer itself is not needed
+#composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+phpunit.xml
+
+deploy/.capistrano
+
+tests/codeception/_output
+
+syntax: regexp
+^yii$
+^vendor$
+^config/main-local\.php$
+^config/console-local\.php$
+^config/params-local\.php$
+^config/web-local\.php$
+^runtime/(?!.*\.hgkeep$).+
+^web/assets/(?!.*\.hgkeep$).+
+^web/index\.php$
+^web/index-test\.php$
+^web/uploads/(?!.*\.hgkeep$).+
