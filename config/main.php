@@ -5,7 +5,12 @@ $params = array_merge(
 );
 
 $config = [
-    'basePath' => dirname(__DIR__),
+    'basePath' => __DIR__.'/../app',
+    'runtimePath' => __DIR__.'/../runtime',
+    'vendorPath' => __DIR__.'/../vendor',
+    'aliases' => [
+        '@templates' => '@app/templates',
+    ],
     'bootstrap' => ['log'],
     'modules' => [
         'admin' => [
@@ -18,7 +23,14 @@ $config = [
         ],
     ],
     'components' => [
-        'cache' => 'yii\caching\FileCache',
+        'cache' => [
+            'class' => '\yii\caching\FileCache',
+            'fileMode' => 0664,
+        ],
+        'mailer' => [
+            'class' => '\yii\swiftmailer\Mailer',
+            'viewPath' => '@templates/mail',
+        ],
     ],
     'params' => $params,
 ];
