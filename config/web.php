@@ -2,33 +2,18 @@
 
 $config = [
     'id' => 'app',
+    'aliases' => [
+        '@bower' => '@vendor/bower-asset',
+        '@npm'   => '@vendor/npm-asset',
+    ],
     'components' => [
         'assetManager' => [
             'linkAssets' => true,
         ],
-        'view' => [
-            'renderers' => [
-                'twig' => [
-                    'class' => 'yii\twig\ViewRenderer',
-                    'cachePath' => '@runtime/Twig/cache',
-                    'options' => [
-                        'auto_reload' => true,
-                    ],
-                ],
-            ],
-        ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                '' => '/site/index',
-                // modules
-                ['pattern' => '<module:(admin)>/<controller:[\w\-]+>/<action:[\w\-]+>/<id:\d+>', 'route' => '/<module>/<controller>/<action>'],
-                ['pattern' => '<module:(admin)>/<controller:[\w\-]+>/<action:[\w\-]+>', 'route' => '/<module>/<controller>/<action>'],
-                ['pattern' => '<module:(admin)>/<controller:[\w\-]+>', 'route' => '/<module>/<controller>'],
-                ['pattern' => '<module:(admin)>', 'route' => '/<module>'],
-            ],
-        ],
+//        'urlManager' => [
+//            'enablePrettyUrl' => true,
+//            'showScriptName' => false,
+//        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,

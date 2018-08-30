@@ -12,16 +12,6 @@ $config = [
         '@templates' => '@app/templates',
     ],
     'bootstrap' => ['log'],
-    'modules' => [
-        'admin' => [
-            'class' => 'app\modules\admin\Module',
-        ],
-        'redactor' => [
-            'class'=>'yii\redactor\RedactorModule',
-            'uploadDir'=>'@web/uploads',
-            'uploadUrl'=>'/uploads',
-        ],
-    ],
     'components' => [
         'cache' => [
             'class' => '\yii\caching\FileCache',
