@@ -43,6 +43,10 @@ The minimum requirement by this project template that your Web server supports P
 INSTALLATION
 ------------
 
+### Clone project
+
+git clone git@github.com:matperez/yii2-app-basic-with-environments.git yii2-app-basic-with-environments
+
 ### Install via Composer
 
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
@@ -51,7 +55,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ~~~
-php composer.phar create-project --prefer-dist --stability=dev yiisoft/yii2-app-basic basic
+php composer.phar install
 ~~~
 
 Now you should be able to access the application through the following URL, assuming `basic` is the directory
