@@ -45,7 +45,9 @@ INSTALLATION
 
 ### Clone project
 
+~~~
 git clone git@github.com:matperez/yii2-app-basic-with-environments.git yii2-app-basic-with-environments
+~~~
 
 ### Install via Composer
 
